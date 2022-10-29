@@ -14,14 +14,14 @@
 
 main {
     width: 100%;
-    padding: 1%;
+    padding: 0.1%;
 }
 
 .sidebar {
     color: #fff;
     background: rgb(87, 87, 87);
     height: 100vh;
-    width: 28%;
+    width: 28vw;
     top: 5%;
     transition: all 0.5s;
 }

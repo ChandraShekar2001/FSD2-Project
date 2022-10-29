@@ -4,7 +4,8 @@ import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import '../components/styles/table.css'
 import {useDispatch, useSelector} from 'react-redux'
 import { getAllOrders } from '../store/actions/order-actions';
-import {useAlert} from 'react-alert'
+import { useAlert } from 'react-alert'
+import { Link } from 'react-router-dom';
 
 const AdminOrders = () => {
   const alert = useAlert()
@@ -36,16 +37,28 @@ const AdminOrders = () => {
           </tr>
         </tbody>
         <tbody>
-          {loading ? <p>Loading...</p> :(orders.map( order =><tr key = {order._id}>
-            <td>{order._id}</td>
-            <td>{ order.orderStatus}</td>
-            <td>{ order.orderItems.length}</td>
-            <td>{order.totalPrice}</td>
-            <td>
-              <span className='tableicon'><FontAwesomeIcon icon={faPen}/></span>
-              <span className='tableicon'><FontAwesomeIcon icon={faTrash}/></span>
-            </td>
-          </tr>))}
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            orders.map((order) => (
+              <tr key={order._id}>
+                <td>{order._id}</td>
+                <td>{order.orderStatus}</td>
+                <td>{order.orderItems.length}</td>
+                <td>{order.totalPrice}</td>
+                <td>
+                  <span className="tableicon">
+                    <Link to={`/admin/order/${order._id}`}>
+                      <FontAwesomeIcon icon={faPen} />
+                    </Link>
+                  </span>
+                  <span className="tableicon">
+                    <FontAwesomeIcon icon={faTrash} />
+                  </span>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>

@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 import allProductsSlice from './allProductsSlice'
-import singleProductSlice from './singleProductSlice'
+import singleProductSlice from './SingleProductSlice'
 import adminProductSlice from './adminProductSlice'
 import createProductSlice from './createProductSlice'
 import updateProductSlice from './updateProductSlice'

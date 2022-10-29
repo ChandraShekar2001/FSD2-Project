@@ -3,7 +3,13 @@
 
 .completeForm {
     position: absolute;
-    top: 4%;
+    top: 5%;
+    left: 44%;
+}
+
+.UsercompleteForm{
+    position: absolute;
+    top: 15%;
     left: 44%;
 }
 
@@ -19,6 +25,17 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.createUserForm {
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 600%;
+    width: 130%;
+    border: 1px solid #e6e6e6;
+    padding: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 
 /* AdmincreatePoduct And Shipping Form */
@@ -47,6 +64,11 @@
 .divInput {
     padding: 5px;
     margin: 10px;
+}
+
+.userDivInput {
+    padding: 5px;
+    margin: 10px 3px 10px 17px;
 }
 
 .createButton{

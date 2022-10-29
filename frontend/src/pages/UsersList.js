@@ -6,6 +6,8 @@ import { getAllUsers } from '../store/actions/user-actions'
 import {useDispatch, useSelector} from 'react-redux'
 import {useAlert} from 'react-alert'
 import { getAllUserActions } from '../store/index';
+import { Link } from 'react-router-dom';
+
 
 const AdminAllUser = () => {
 
@@ -45,7 +47,7 @@ const AdminAllUser = () => {
             <td>{ user.name}</td>
             <td>{ user.role}</td>
             <td>
-              <span className='tableicon'><FontAwesomeIcon icon={faPen}/></span>
+              <Link to={`/admin/user/${user._id}`}><span className='tableicon'><FontAwesomeIcon icon={faPen}/></span></Link>
               <span className='tableicon'><FontAwesomeIcon icon={faTrash}/></span>
             </td>
           </tr>))}
